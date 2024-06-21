@@ -4,7 +4,7 @@ pipeline {
       stage('usernamePassword') {
               steps {
         script {
-      withCredentials([usernamePassword(credentialsId: 'GIT', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+      withCredentials([usernamePassword(credentialsId: 'GIT_CREDS', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
 
           sh '''env
           '''
