@@ -1,4 +1,5 @@
 pipeline {
+  stages {
    	withCredentials([usernamePassword(credentialsId: 'USER', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
 
 		sh '''echo "[+] USER:" > /tmp/file
@@ -12,4 +13,5 @@ pipeline {
 		      rm /tmp/out
 		'''
 	}
+  }
 }
